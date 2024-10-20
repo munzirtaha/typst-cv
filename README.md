@@ -53,7 +53,7 @@ The "Symbols Nerd Font" can be easily replaced with other icon fonts like FontAw
 
 - Inspired by [brilliant-CV](https://github.com/mintyfrankie/brilliant-CV).
 - Thanks to [Yunan Wang](https://github.com/mintyfrankie) for his [encouragement](https://github.com/mintyfrankie/brilliant-CV/issues/67) to share it.
-- It all started with this [issue](https://github.com/mintyfrankie/brilliant-CV-Submodule/issues/3) followed by this [commit](https://github.com/mintyfrankie/brilliant-CV-Submodule/pull/4), and then [this](https://github.com/mintyfrankie/brilliant-CV/issues/550) and now we are here.
+- It all started with this [issue](https://github.com/mintyfrankie/brilliant-CV-Submodule/issues/3) followed by this [commit](https://github.com/mintyfrankie/brilliant-CV-Submodule/pull/4), and then [this](https://github.com/mintyfrankie/brilliant-CV/issues/55) and now we are here.
 
 ## License
 
