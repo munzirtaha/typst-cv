@@ -15,7 +15,7 @@
 
 #header(
   name: [*Munzir* Taha],
-  title: "IT Consultant",
+  title: "Senior System Engineer · IT Consultant",
   mobile: "+90 123 456 78 90",
   email: "example@example.com",
   github: "https://github.com/munzirtaha",

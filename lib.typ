@@ -28,16 +28,16 @@
   box(width: 1fr, line(start: (0.1em, 0em), length: 100%))
 }
 
-#let entry(logo: none, title: none, entity: none, location: none, date: none, details: [], tags: ()) = {
+#let entry(logo: none, entity: none, title: none, location: none, date: none, details: [], tags: ()) = {
   grid(
     columns: (2em, 1fr, auto),
     align: horizon,
     gutter: 0.5em,
     text(2em, fill: primary-color, logo),
     {
-      strong(smallcaps(title))
+      strong(smallcaps(entity))
       linebreak()
-      text(primary-color, entity)
+      text(primary-color, title)
     },
     {
       align(right)[
