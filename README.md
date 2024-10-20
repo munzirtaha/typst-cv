@@ -2,7 +2,7 @@
 
 A clean, customizable CV template created with Typst.
 
-![CV Template Preview](assets/preview.svg)
+![CV Template Preview](preview.svg)
 
 [View full example PDF](cv.pdf)
 
@@ -41,7 +41,7 @@ To change the color scheme, modify the following lines in `lib.typ`:
 
 ### Fonts
 
-The template uses a combination of fonts that can be easily customized. To change the fonts, modify the following line in `cv.typ`:
+The template uses a combination of fonts that can be easily customized. To change the fonts, modify the following in `cv.typ`:
 
 ```typst
 font: ("Libertinus Serif", "Noto Color Emoji", "Symbols Nerd Font"))
