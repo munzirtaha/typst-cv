@@ -1,49 +1,77 @@
 #let primary-color = rgb("#0395DE")
 #let secondary-color = gray
 
-#let header(name: none, title: none, mobile: none, email: none, github: none, linkedin: none, photo: none) = {
+#let header(
+  name: none,
+  title: none,
+  mobile: none,
+  email: none,
+  github: none,
+  linkedin: none,
+  photo: none,
+) = {
+  let contact = ()
   grid(
     columns: (1fr, 13%),
-    [
-      #text(font: "Snell Roundhand", 3em, name)\
-      #set text(primary-color)
-
-      #smallcaps(title)
-
-      📱 #link("tel:" + mobile) |
-      📧 #link("mailto:" + email) |
-       #link(github)[#github.split("/").last()] |
-       #link(linkedin)[#linkedin.split("/").last()]
-    ],
-    if "photo" != none {
-      box(clip: true, radius: 50%, image(photo))
-    }
+    stack(
+      spacing: 1.2em,
+      text(font: "Snell Roundhand", 3em, primary-color, name),
+      smallcaps(title),
+      {
+        if mobile != none {
+          contact.push([📱 #link("tel:" + mobile)])
+        }
+        if email != none {
+          contact.push([📧 #link("mailto:" + email)])
+        }
+        if github != none {
+          contact.push([\u{f09b} #link(github)[#github.split("/").last()]])
+        }
+        if linkedin != none {
+          contact.push([\u{f08c} #link(linkedin)[#linkedin.split("/").last()]])
+        }
+        if contact.len() > 0 {
+          contact.join([ | ])
+        }
+      },
+    ),
+    if photo != none {
+      box(radius: 50%, clip: true, image(photo))
+    },
   )
+
 }
 
 #let section(title) = {
   set par(spacing: 0.65em)
-  set text(1.4em, weight: "bold")
+  set text(weight: "bold", 1.4em)
   text(primary-color)[#title.slice(0, 3)] + title.slice(3)
   box(width: 1fr, line(start: (0.1em, 0em), length: 100%))
 }
 
-#let entry(logo: none, entity: none, title: none, location: none, date: none, details: [], tags: ()) = {
+#let entry(
+  logo: none,
+  entity: none,
+  title: none,
+  location: none,
+  date: none,
+  details: [],
+  tags: (),
+) = {
   grid(
     columns: (2em, 1fr, auto),
-    align: horizon,
     gutter: 0.5em,
-    text(2em, fill: primary-color, logo),
+    align: (center + horizon, start, end),
+    text(1.6em, primary-color, logo),
     {
       strong(smallcaps(entity))
       linebreak()
       text(primary-color, title)
     },
     {
-      align(right)[
-        #text(primary-color, style: "italic", location)\
-        #text(secondary-color, style: "italic", date)
-      ]
+      text(style: "italic", primary-color, location)
+      linebreak()
+      text(style: "italic", secondary-color, date)
     },
   )
   details
@@ -56,14 +84,13 @@
   tagList(tags)
 }
 
-#let honor(date: none, logo: none, title: none, issuer: none) = {
+#let honor(date: none, logo: none, title: none, details: none) = {
   grid(
-    columns: (16%, 1.5em, 1fr),
-    align: horizon,
-    gutter: 0.2em,
-    align(right, text(secondary-color, date)),
-    align(center, box(height: 1em, logo)),
-    [#strong(title), #issuer],
+    columns: (14%, 2em, 1fr),
+    align: (end, center, auto),
+    text(secondary-color, date),
+    box(width: 1.8em, height: 1em, logo),
+    [#strong(title), #details],
   )
 }
 
@@ -71,6 +98,6 @@
   grid(
     columns: (16%, 1fr),
     gutter: 0.9em,
-    align(right, text(weight: "bold", type)), info,
+    align(end, text(weight: "bold", type)), info,
   )
 }

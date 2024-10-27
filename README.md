@@ -2,24 +2,25 @@
 
 A clean, customizable CV template created with Typst.
 
-![CV Template Preview](preview.svg)
+![CV Template Preview](cv.svg)
 
-[View full example PDF](cv.pdf)
+[View example PDF](cv.pdf)
 
 ## Features
 
-- Separate files for layout/styling (`lib.typ`) and content (`cv.typ`)
 - Customizable color scheme
 - Photo option in the header
 - Easy-to-use functions for different CV sections
 - Automatic date and page numbering in the footer
-- Flexible font customization, including easy symbol font replacement
 - Option to use emojis as logos for a simple, colorful design
   - Example: Use "🚀" as a logo for a tech company or project
+- Flexible font customization, including easy symbol font replacement
+- Separate files for layout/styling (`lib.typ`) and content (`cv.typ`)
 - Easily customizable header icons
   - Flexible to change icons by pasting the icon itself or its Unicode
   - Example: Change "📱" to "📞" or "\u{1F4DE}" for the phone icon
 - Comprehensive set of CV sections (Education, Experience, Projects, Honors, Certifications, Skills, etc.)
+- Multilingual support including RTL languages. Just edit `lang: "en"` to your preferred language.
 
 ## Usage
 
