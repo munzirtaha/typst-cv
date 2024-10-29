@@ -100,13 +100,6 @@
 
 #section("Certifications")
 #honor(
-  date: [Aug 2014],
-  logo: image("assets/logos/Linux_Foundation.svg"),
-  title: [LFS101x: Introduction to Linux],
-  details: [The Linux Foundation, *Score:* 100%],
-)
-
-#honor(
   date: [Jan 2013],
   logo: "\u{ef6d}",
   title: [SUSE Certified Linux Professional],
@@ -118,6 +111,13 @@
   logo: [\u{f316}],
   title: [Red Hat Certified Engineer (RHCE)],
   details: [Red Hat, *Score:* 300],
+)
+
+#honor(
+  date: [Mar 2012],
+  logo: [\u{f316}],
+  title: [Red Hat Certified System Administrator (RHCSA)],
+  details: [Red Hat, *Score:* 283],
 )
 
 #section("Skills")
